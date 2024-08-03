@@ -8,19 +8,12 @@
 - [Comments](#Comments)
 - [Documentation](#Documentation)
 - [Naming Conventions](#Naming_Conventions)
-- [Variables](#Variables)
-- [Functions](#Functions)
-- [Classes](#Classes)
-- [Formatting](#Formatting)
+- [Naming Rules](#Naming_Rules)
 - [Exception Handling](#Exception_Handling)
 - [Maximum Line Length](#Max_Line_Length)
 - [Blank Lines](#Blank_Lines)
 - [Indentation](#Indentation)
-- [Code Blocks](#Code_Blocks)
 - [Max Nesting Levels](#Max_Nesting_Levels)
-- [Operators](#Operators)
-- [Iterators](#Iterators)
-- [Containers](#Containers)
 - [Optimization](#Optimization)
 
 ---
@@ -29,15 +22,37 @@
 
 This document serves as a general style guide to be used across various programming languages. This is a style guide that I am creating for myself. The most important part of this style guide will be the naming conventions, as these will stay consistent across most languages. Other aspects regarding to syntax and such can change depending on the language. If you decide to use this style guide feel free to modify it in anyway that makes your code more consistent. Consistency is reason that style guides exist in the first place.
 
- Each programming language and project will most likely already have a style guide they wish for you to use.  The most important aspect of any style guide is to stay consistent. If you wish to work with another project you should use the existing style guide. If you don't... they probably won't like you very much. Conforming to an existing style guide is often made simpler by installing a linter. Many programming languages have existing linters that you can run your code through, or add to your IDE, that will automatically handle formatting your code to fit their style guide.
+Each programming language and project will most likely already have a style guide they wish for you to use. The most important aspect of any style guide is to stay consistent. If you wish to work with another project you should use the existing style guide. If you don't... they probably won't like you very much. Conforming to an existing style guide is often made simpler by installing a linter. Many programming languages have existing linters that you can run your code through, or add to your IDE, that will automatically handle formatting your code to fit their style guide.
 
 <h2 id="Readability">Readability</h2>
+
+The code should prioritize readability. This means that it should be easy for you and other maintainers to understand, modify, and maintain. This should be facilitated through a mixture of naming conventions, structured programming, comments, and a prioritization of consistency.
 
 <h2 id="Headers">Headers</h2>
 
 <h2 id="Footers">Footers</h2>
 
 <h2 id="Comments">Comments</h2>
+
+You will find many who will say things along the lines of "code should be self-documenting." I do not agree. I believe that code should have as many comments as needed. What many would probably consider too many comments. Code should be "self-documenting" in the sense that naming conventions, structured programming, consistency, etc. However, I believe that very rarely will a comment truly deter much readability. In contrary a comment will more often than not add insight into the code itself or the programmer's reasoning or mindset. What may be clear in the code to you now may not be in a month, year, or even a day. The code may also not be clear to the next maintainer or user of the codebase. For these reasons I believe that comments should be used extensively.
+
+The verbosity of the comments is up to the discretion of the programmer. However, I believe a good rule of thumb is that whenever you are stumped or confused you should add a comment. If you as the one creating it are confused, it is rationale to assume that the next maintainer, or even you at a future date, would be confused or stumped as well.
+
+Ideally a good comment describes why you're doing something.
+
+Classes, structures, etc. should be given a comment describing what it does. This comment can also include a section describing variables, arguments, parameters, attributes, etc. Examples of how they could be implemented or used could also be beneficial.
+
+Functions can be given comments describing them similarly to Classes, structures, etc., but not every function will be complex enough to need such a comment.
+
+Variables can be given comments if you feel that they're needed.
+
+Comments for control flow such as conditional statements, loops, etc. should handled as needed.
+
+It could prove helpful to develop types of comments to keep standardized as well. For example, you could have a "TODO" or "FIX" type of comment used to easily search for code that is temporary or needs to be addressed.
+
+Comments **need** to be updated to be consistent with any changes that occur to the code itself. The only truly bad comment, in my opinion, is one that is not accurate.
+
+Overall, my philosophy when it comes to comments is to use them as much as you need, think you need, or think you may need in the future, and to provide as much verbosity are you see fit.
 
 <h2 id="Documentation">Documentation</h2>
 
@@ -79,6 +94,10 @@ The following are the naming conventions you should use for different elements:
 
 ---
 
+- Type: PascalCase
+
+---
+
 - Interface: PascalCase
 
 ---
@@ -115,15 +134,19 @@ The following are the naming conventions you should use for different elements:
 - Primary Key: snake_case (Ex: table_id)
 - Foreign Key: snake_case (Keep the name consistent across tables)
 
-<h2 id="Variables">Variables</h2>
+<h2 id="Naming_Rules">Naming Rules</h2>
 
-<h2 id="Functions">Functions</h2>
+Names that you use should be readable and clear to what they do.
 
-<h2 id="Classes">Classes</h2>
+You should use names that describe the purpose, intent, or use of the object being named. Abbreviations should not be used, unless it would be known by outside observers. The quality of the name should be prioritized over shortening the length of the name.
 
-<h2 id="Formatting">Formatting</h2>
+What you name objects is up to your discretion, but be consistent and descriptive. The object's purpose should be easily readable from their given name. The objects name should also follow the Naming Conventions for the type of object it is.
 
 <h2 id="Exception_Handling">Exception Handling</h2>
+
+Exception handling should be used sparingly. Exception handling should be used when there's a possible error. You have the option of either trying to recover from the error or to throw an exception and give the user information about the error that occurred.
+
+A common use for exception handling is when you get inputs. These inputs may not be valid. You can use exception handling to inform the user to format their inputs in the expected way. Another common example is when attempting to open a file that may or may not exist.
 
 <h2 id="Max_Line_Length">Maximum Line Length</h2>
 
@@ -131,18 +154,30 @@ A good max line length is 80 characters. However, set this to what looks best to
 
 <h2 id="Blank_Lines">Blank Lines</h2>
 
+Blank lines should be used to separate different elements and blocks in the code.
+
+Functions should be separated from other functions and elements with a single blank line.
+
+Classes, structures, etc. should be separated from other functions and elements by two blank lines.
+
+Blocks of code, sections of code related to each other, should be separated from other blocks of code by a single blank line.
+
+Comments should not be separated with blank lines. Comments should either be inline or directly above or below another element. The only exception being comments that are not directly related to what is above or below them. Such as describing the general though process of the surrounding code, not the code itself.
+
 <h2 id="Indentation">Indentation</h2>
 
 The most common indentation sizes are 4 and 2 spaces. 4 spaces per indentation is the common default size used by many IDES. Choose the size you prefer and be consistent. Every IDE should transform the tab key into spaces. Don't be a maniac who is manually entering spaces every indentation. You can install a linter and let it handle making this consistent for you.
 
-<h2 id="Code_Blocks">Code Blocks</h2>
-
 <h2 id="Max_Nesting_Levels">Max Nesting Levels</h2>
 
-<h2 id="Iterators">Iterators</h2>
+Nesting is when you write a block of code inside of another block of code.
 
-<h2 id="Operators">Operators</h2>
+In most programming languages you will probably be able to nest code more times than you could ever possibly write. However, because you can do something doesn't mean you should. The main reason is due to preserving the readability of the code. With every level of nesting you add the code can become less readable and confusing.
 
-<h2 id="Containers">Containers</h2>
+In most circumstances you shouldn't be using more than 3 nesting levels from the "root" level, the initial block of code.
+
+More nesting levels can be used, but you're already limited in part by the size of the indentation and the line width. After a certain point there's not enough space for any readability, which is why you should limit the amount of nesting you use. The most common way to reduce the amount of nesting needed is to refactor your code into separate functions.
+
+Operators, if following direction, should be left-handed. For example, if defining a variable with assignment and/or declaration you should have the variable name on the left and the value on the right.
 
 <h2 id="Optimization">Optimization</h2>
