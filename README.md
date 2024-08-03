@@ -1,3 +1,3 @@
 # Garrett's General Programming Style Guide
 
-This will be a style guide for myself.
+This a style guide that I have developed to use for my personal projects across various programming languages.
