@@ -1,5 +1,7 @@
 # Garrett's General Programming Style Guide
 
+## Version: 1.0
+
 # Table of Contents
 
 - [Readability](#Readability)
@@ -20,17 +22,65 @@
 
 # Preamble
 
-This document serves as a general style guide to be used across various programming languages. This is a style guide that I am creating for myself. The most important part of this style guide will be the naming conventions, as these will stay consistent across most languages. Other aspects regarding to syntax and such can change depending on the language. If you decide to use this style guide feel free to modify it in anyway that makes your code more consistent. Consistency is reason that style guides exist in the first place.
+This document serves as a general style guide to be used across various programming languages. This is a style guide that I am creating for myself. The most important part of this style guide will be the naming conventions, as these will stay consistent across most languages. Other aspects regarding syntax and such can change depending on the language. If you decide to use this style guide, feel free to modify it in any way that makes your code more consistent. Consistency is reasoning that style guides exist in the first place.
 
-Each programming language and project will most likely already have a style guide they wish for you to use. The most important aspect of any style guide is to stay consistent. If you wish to work with another project you should use the existing style guide. If you don't... they probably won't like you very much. Conforming to an existing style guide is often made simpler by installing a linter. Many programming languages have existing linters that you can run your code through, or add to your IDE, that will automatically handle formatting your code to fit their style guide.
+Each programming language and project will most likely already have a style guide they wish for you to use. The most important aspect of any style guide is to stay consistent. If you wish to work on another project, you should use the existing style guide. If you don't... they probably won't like you very much. Conforming to an existing style guide is often made simpler by installing a linter. Many programming languages have existing linters that you can run your code through, or add to your IDE, which will automatically handle formatting your code to fit their style guide.
 
 <h2 id="Readability">Readability</h2>
 
 The code should prioritize readability. This means that it should be easy for you and other maintainers to understand, modify, and maintain. This should be facilitated through a mixture of naming conventions, structured programming, comments, and a prioritization of consistency.
 
-<h2 id="Headers">Headers</h2>
+<h2 id="Headers">Header Comment</h2>
 
-<h2 id="Footers">Footers</h2>
+A header comment, a comment at the beginning of the code, is useful in tracking details such as the license the code uses, the author of the code, and when the code was created.
+
+You could also add a small description about what the project does and/or what the file does. However, this could become verbose very quickly.
+
+An example of what a header comment could look like is:
+
+---
+
+Project: [Project Name] [(link to website, source code, or repository)].
+
+Copyright: Copyright (c) [First Year]-[Current Year] [Project Name] Contributors
+
+Version: [Version Number]
+
+Status: [Removed, Deprecated, Prototype, Development, Production]
+
+License: [License]
+
+Author(s): [Author - Contact,]
+
+Maintainer: [Author - Contact]
+
+Credit: [Credit to additional parties that aren't contributors]
+
+Project Description: [Small description about what this project does]
+
+File Description: [Small description about what this file does]
+
+---
+
+This header comment is very verbose. Feel free to pick and choose the elements to use in your header comment at your discretion. The only ones you truly need to include are the ones required by the license you're using.
+
+<h2 id="Footers">Footer Comment</h2>
+
+A footer comment, a comment at the end of the code, is used to track the contributions of contributors. This is used to keep track of changes to the code in the event that the source control system fails or is removed.
+
+An example footer comment would look like:
+
+---
+
+History of Contributions:
+[Year/Month/Day] - [Author - Contact] - [Brief description of the change]
+...
+
+---
+
+With each contribution being listed below.
+
+This is an optional element to include in your code that. It is an element that I have never seen included in another style guide, but I feel it could be useful. Possibly, to prevent it from becoming too verbose would be record a date range instead of a single date. That way not every contribution needs to be listed, only large changes of note.
 
 <h2 id="Comments">Comments</h2>
 
@@ -46,9 +96,11 @@ Functions can be given comments describing them similarly to Classes, structures
 
 Variables can be given comments if you feel that they're needed.
 
-Comments for control flow such as conditional statements, loops, etc. should handled as needed.
+Comments for control flow such as conditional statements, loops, etc. should be handled as needed.
 
 It could prove helpful to develop types of comments to keep standardized as well. For example, you could have a "TODO" or "FIX" type of comment used to easily search for code that is temporary or needs to be addressed.
+
+Another example could be "Author: Name - Contact" to specify sections of code worked on by specific authors, as well as "Year: YYYY" or "Date: YYYY/MM/DD" to track when the code was worked on. I personally believe that this information should be recorded in the source code. In the event of the source control system failing, having the author and date information about sections of code in the source code directly would maintain credit.
 
 Comments **need** to be updated to be consistent with any changes that occur to the code itself. The only truly bad comment, in my opinion, is one that is not accurate.
 
@@ -69,7 +121,7 @@ There are 4 common naming conventions:
 - PascalCase
 - kebab-case
 
-In addition to the above naming conventions there is Hungarian notation. This is a type of notation where data type information is added to the name of a function, variable, etc. usually as a prefix. Hungarian notation is not often used anymore due to IDEs displaying variable types, but can be used if desired.
+In addition to the above naming conventions there is Hungarian notation. This is a type of notation where data type information is added to the name of a function, variable, etc. usually as a prefix. Hungarian notation is not often used anymore due to IDEs displaying variable types but can be used if desired.
 
 The following are the naming conventions you should use for different elements:
 
@@ -140,7 +192,7 @@ Names that you use should be readable and clear to what they do.
 
 You should use names that describe the purpose, intent, or use of the object being named. Abbreviations should not be used, unless it would be known by outside observers. The quality of the name should be prioritized over shortening the length of the name.
 
-What you name objects is up to your discretion, but be consistent and descriptive. The object's purpose should be easily readable from their given name. The objects name should also follow the Naming Conventions for the type of object it is.
+What you name objects is up to your discretion but be consistent and descriptive. The object's purpose should be easily readable from their given name. The objects name should also follow the Naming Conventions for the type of object it is.
 
 <h2 id="Exception_Handling">Exception Handling</h2>
 
@@ -172,12 +224,16 @@ The most common indentation sizes are 4 and 2 spaces. 4 spaces per indentation i
 
 Nesting is when you write a block of code inside of another block of code.
 
-In most programming languages you will probably be able to nest code more times than you could ever possibly write. However, because you can do something doesn't mean you should. The main reason is due to preserving the readability of the code. With every level of nesting you add the code can become less readable and confusing.
+In most programming languages you will probably be able to nest code more times than you could ever possibly write. However, because you can do something doesn't mean you should. The main reason is due to preserving the readability of the code. With every level of nesting, you add the code can become less readable and confusing.
 
 In most circumstances you shouldn't be using more than 3 nesting levels from the "root" level, the initial block of code.
 
 More nesting levels can be used, but you're already limited in part by the size of the indentation and the line width. After a certain point there's not enough space for any readability, which is why you should limit the amount of nesting you use. The most common way to reduce the amount of nesting needed is to refactor your code into separate functions.
 
-Operators, if following direction, should be left-handed. For example, if defining a variable with assignment and/or declaration you should have the variable name on the left and the value on the right.
+Operators, if following directions, should be left-handed. For example, if defining a variable with assignment and/or declaration you should have the variable name on the left and the value on the right.
 
 <h2 id="Optimization">Optimization</h2>
+
+You should aim to make your code as optimized as you are capable of achieving.
+
+We live in a time where computers are more than capable of running even the most unoptimized code, inefficient code, poorly written code, and slow programming languages at speeds faster than you could ever reasonably need. However, I believe you should still aim to create the highest quality product that you are capable of. To not strive to create the best work you can is a disservice to yourself as a creator.
