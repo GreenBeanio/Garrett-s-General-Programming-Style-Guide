@@ -15,8 +15,14 @@
 - [Maximum Line Length](#Max_Line_Length)
 - [Blank Lines](#Blank_Lines)
 - [Indentation](#Indentation)
+- [Curly Brackets](#Curly_Bracket)
+- [Parentheses](#Parentheses)
+- [Semicolon](#Semicolon)
+- [Quotes](#Quotes)
 - [Max Nesting Levels](#Max_Nesting_Levels)
 - [Optimization](#Optimization)
+- [Principle of Least Privilege](#PLP)
+- [General Programming Language Information](#PLA)
 
 ---
 
@@ -220,6 +226,34 @@ Comments should not be separated with blank lines. Comments should either be inl
 
 The most common indentation sizes are 4 and 2 spaces. 4 spaces per indentation is the common default size used by many IDES. Choose the size you prefer and be consistent. Every IDE should transform the tab key into spaces. Don't be a maniac who is manually entering spaces every indentation. You can install a linter and let it handle making this consistent for you.
 
+<h2 id="Curly_Bracket">Curly Brackets</h2>
+
+If the programming language you're using uses curly brackets, or another symbol, to start and end code blocks there is always a debate. Do I put them on the same line or the next line? This is a personal preference.
+
+For this style guide put the curly brackets on the same line.
+
+<h2 id="Parentheses">Parentheses</h2>
+
+Parentheses are used to handle the order of operations or order of evaluation, handle expressions, and invoke functions in programming languages.
+
+However, some programming languages require parentheses around certain expressions. For example, R, C++, and JavaScript require parentheses around conditional statements, but Python and don't require them. This is another decision that should be handled by the general community standard of the programming language. Personally, I'm biased to put parentheses around conditional statements, but the Python general community consensus is to not use parentheses.
+
+<h2 id="Semicolon">Semicolon</h2>
+
+In most programming languages the semicolon serves the purpose of ending a statement. However, not every programming language uses a semicolon as the symbol to end a statement. Consider this section regarding whatever the symbol ending a statement is in your current programming language is.
+
+In most programming languages using a semicolon isn't a choice. If you're ending a statement you need to use one. However, there are programming languages such as Python and JavaScript that support semicolons but aren't required. If you're using a programming language where they're not required, you should follow the standard guide of that programming language. For example, in JavaScript you should be using semicolons, but in Python you should never use a semicolon.
+
+<h2 id="Quotes">Quotes</h2>
+
+Should you use single or double quotes? Maybe the programming language you're using supports backticks. Depending on the programming language you're using there may be special definitions for these symbols. In many languages single quotes are a char and double quotes are a string. However, in many languages single and double quotes are interchangeably. You should use whichever choice is better for the programming language you're using.
+
+If you're using C++ use double quotes, if you're using Python use f-strings with either single or double quotes, if you're using JavaScript use backticks, and if you're using R use double quotes. It depends on the programming language and you're personal preference. For example, in Python, R, and JavaScript single and double quotes do the same thing.
+
+Using a single quote will be seen as more efficient by some because you don't need to press shift. However, programmers who come from languages like C, C++, C#, and Java, which have the char data type, will be used to using the double quote for strings out of habit.
+
+In programming languages that don't have the char data type you should use single quotes for strings, but for programming languages with the char data type you should use double quotes.
+
 <h2 id="Max_Nesting_Levels">Max Nesting Levels</h2>
 
 Nesting is when you write a block of code inside of another block of code.
@@ -237,3 +271,47 @@ Operators, if following directions, should be left-handed. For example, if defin
 You should aim to make your code as optimized as you are capable of achieving.
 
 We live in a time where computers are more than capable of running even the most unoptimized code, inefficient code, poorly written code, and slow programming languages at speeds faster than you could ever reasonably need. However, I believe you should still aim to create the highest quality product that you are capable of. To not strive to create the best work you can is a disservice to yourself as a creator.
+
+<h2 id="PLP">Principle of Least Privilege</h2>
+
+You should use the least amount of privilege possible for your application. Meaning that you should use as little permissions, resources, data, and other applications as required by your application.
+
+<h2 id="PLA"> General Programming Language Information</h2>
+
+Programming languages are statically typed or dynamically typed. Statically typed programming languages need variables to be assigned a data type and are checked at compile time, while dynamically typed programming languages do not require variables to be assigned data types and are checked during execution or runtime. Statically types programming languages require you to explicitly assign a data type, while a dynamically typed programming language will assign the data type for you. You also can't change or convert the data type of a variable after it's been created in a statically typed programming language, but you can in a dynamically typed programming language.
+
+Programming languages are also strongly typed or weakly typed. Strongly typed programming languages have strict rules and constraints when it comes to what you can do with a data type. Weakly typed programming languages have loose rules and constraints about what you can do with a data type. The definitions of strong and weak typing are still controversial and not agreed upon. However, generally the consensus seems that a strongly typed programming language won't allow implicit conversion while a weakly typed programming language will. Implicit conversion allows a data type to be transformed from one data type to another automatically. While explicit conversion only allows for data types to be transformed to another data type when explicitly told to, such as by being cast.
+
+---
+
+Programming languages are also either compiled or interpreted.
+
+Compiled programming languages are run through a compiler to transform source code into machine code or object code. This resulting machine or object code is run natively on the platform or the runtime environment it was compiled for. There are two main types of compiled programming languages Ahead of Time and Just in Time. Ahead of Time compilers are compiled statically, before the program is running, and Just in Time compilers are compiled dynamically, while the program is running.
+
+Interpreted programming languages are run the source code through an interpreter. The interpreter itself runs on the native platform and executes the source code. The difference between an interpreter and a Just in Time compiler is that an interpreter will read and execute code as it goes, while a Just in Time compiler will read and compile to machine code or object code the parts it needs as it needs it.
+
+Some programming languages are compiled to another form of code known as bytecode or an intermediate language, which is then run through an interpreter or even a Just in Time compiler. Such as Java which compiles its source code into bytecode and then runs it through its interpreter and Just in Time compiler the JVM.
+
+Some compilers will go through an intermediate step of generating assembly or provide the option to generate assembly instead of machine code. This assembly would then get sent through an assembler to create the machine code.
+
+Compiled programming languages are often much faster in terms of execution than interpreted programming languages, but you have to compile them for every platform you use. Interpreted programming languages may be slower but have more flexibility because you can run the source code directly on any platform given that you have an interpreter for it.
+
+---
+
+Programming languages are either high-level or low-level. High-level programming languages are separated highly from the underlying machine code and are very human-readable, but not machine-readable Low-level programming languages are much closer to the underlying machine code and are not very human-readable but are much more machine-readable. High-level programming languages are very portable and can be used on various platforms, but they need to be compiled or interpreted. Low-level programming languages are not very portable and can only be used on the platform they're built for; they need to be assembled. Some high-level programming languages are C, C++, C#, Java, Python, R, and Javascript. Low-level programming languages consist of machine code itself and the different types of assembly built for specific instruction set architecture, computer architecture, platforms, or processors. Assembly is the lowest level of human-readable programming languages and is very strongly related to a computer architecture's instructions.
+
+---
+
+Variables in most programming languages have 2 general scopes: local and global. Variables in the global scope are accessible from anywhere in the code. Variables in the local scope are only accessible withing the block of code they're defined in.
+
+---
+
+Many object-oriented programming languages have access modifiers. Access modifiers are used to restrict access to class members. Different programming languages will have different access modifiers. I will use the access modifiers from C# instead of C++ or Java, because C# has the most.
+
+- Public: Access isn't restricted.
+- Private:  Accessible to the containing class.
+- Protected: Accessible to the containing class or derived (inherited) classes.
+- Internal: Accessible to the current assembly (executables and libraries).
+- File: Only accessible to the current source file.
+- Protected Internal: Accessible to the current assembly (executables and libraries) or derived (inherited) classes.
+- Private Protected: Accessible to the containing class or derived (inherited) classes within the current assembly (executables and libraries).
