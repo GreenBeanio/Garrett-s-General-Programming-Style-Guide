@@ -22,7 +22,6 @@
 - [Max Nesting Levels](#Max_Nesting_Levels)
 - [Optimization](#Optimization)
 - [Principle of Least Privilege](#PLP)
-- [General Programming Language Information](#PLA)
 
 ---
 
@@ -275,43 +274,3 @@ We live in a time where computers are more than capable of running even the most
 <h2 id="PLP">Principle of Least Privilege</h2>
 
 You should use the least amount of privilege possible for your application. Meaning that you should use as little permissions, resources, data, and other applications as required by your application.
-
-<h2 id="PLA"> General Programming Language Information</h2>
-
-Programming languages are statically typed or dynamically typed. Statically typed programming languages need variables to be assigned a data type and are checked at compile time, while dynamically typed programming languages do not require variables to be assigned data types and are checked during execution or runtime. Statically types programming languages require you to explicitly assign a data type, while a dynamically typed programming language will assign the data type for you. You also can't change or convert the data type of a variable after it's been created in a statically typed programming language, but you can in a dynamically typed programming language.
-
-Programming languages are also strongly typed or weakly typed. Strongly typed programming languages have strict rules and constraints when it comes to what you can do with a data type. Weakly typed programming languages have loose rules and constraints about what you can do with a data type. The definitions of strong and weak typing are still controversial and not agreed upon. However, generally the consensus seems that a strongly typed programming language won't allow implicit conversion while a weakly typed programming language will. Implicit conversion allows a data type to be transformed from one data type to another automatically. While explicit conversion only allows for data types to be transformed to another data type when explicitly told to, such as by being cast.
-
----
-
-Programming languages are also either compiled or interpreted.
-
-Compiled programming languages are run through a compiler to transform source code into machine code or object code. This resulting machine or object code is run natively on the platform or the runtime environment it was compiled for. There are two main types of compiled programming languages Ahead of Time and Just in Time. Ahead of Time compilers are compiled statically, before the program is running, and Just in Time compilers are compiled dynamically, while the program is running.
-
-Interpreted programming languages are run the source code through an interpreter. The interpreter itself runs on the native platform and executes the source code. The difference between an interpreter and a Just in Time compiler is that an interpreter will read and execute code as it goes, while a Just in Time compiler will read and compile to machine code or object code the parts it needs as it needs it.
-
-Some programming languages are compiled to another form of code known as bytecode or an intermediate language, which is then run through an interpreter or even a Just in Time compiler. Such as Java which compiles its source code into bytecode and then runs it through its interpreter and Just in Time compiler the JVM.
-
-Some compilers will go through an intermediate step of generating assembly or provide the option to generate assembly instead of machine code. This assembly would then get sent through an assembler to create the machine code.
-
-Compiled programming languages are often much faster in terms of execution than interpreted programming languages, but you have to compile them for every platform you use. Interpreted programming languages may be slower but have more flexibility because you can run the source code directly on any platform given that you have an interpreter for it.
-
----
-
-Programming languages are either high-level or low-level. High-level programming languages are separated highly from the underlying machine code and are very human-readable, but not machine-readable Low-level programming languages are much closer to the underlying machine code and are not very human-readable but are much more machine-readable. High-level programming languages are very portable and can be used on various platforms, but they need to be compiled or interpreted. Low-level programming languages are not very portable and can only be used on the platform they're built for; they need to be assembled. Some high-level programming languages are C, C++, C#, Java, Python, R, and Javascript. Low-level programming languages consist of machine code itself and the different types of assembly built for specific instruction set architecture, computer architecture, platforms, or processors. Assembly is the lowest level of human-readable programming languages and is very strongly related to a computer architecture's instructions.
-
----
-
-Variables in most programming languages have 2 general scopes: local and global. Variables in the global scope are accessible from anywhere in the code. Variables in the local scope are only accessible withing the block of code they're defined in.
-
----
-
-Many object-oriented programming languages have access modifiers. Access modifiers are used to restrict access to class members. Different programming languages will have different access modifiers. I will use the access modifiers from C# instead of C++ or Java, because C# has the most.
-
-- Public: Access isn't restricted.
-- Private:  Accessible to the containing class.
-- Protected: Accessible to the containing class or derived (inherited) classes.
-- Internal: Accessible to the current assembly (executables and libraries).
-- File: Only accessible to the current source file.
-- Protected Internal: Accessible to the current assembly (executables and libraries) or derived (inherited) classes.
-- Private Protected: Accessible to the containing class or derived (inherited) classes within the current assembly (executables and libraries).
