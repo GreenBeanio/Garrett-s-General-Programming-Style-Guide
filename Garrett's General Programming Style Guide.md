@@ -186,6 +186,7 @@ The following are the naming conventions you should use for different elements:
 
 ---
 
+- Database: snake_case
 - Database Table/Collection: snake_case (Singular not plural, but this is mostly a personal choice just stay consistent)
 - Database Columns/Field: snake_case (Singular)
 - Primary Key: snake_case (Ex: table_id)
