@@ -45,7 +45,7 @@ An example of what a header comment could look like is:
 
 ---
 
-Project: [Project Name] [(link to website, source code, or repository)].
+Project: [Project Name] [(link to website, source code, or repository)]
 
 Copyright: Copyright (c) [First Year]-[Current Year] [Project Name] Contributors
 
