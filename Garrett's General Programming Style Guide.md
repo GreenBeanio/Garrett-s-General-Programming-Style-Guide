@@ -55,9 +55,9 @@ Status: [Removed, Deprecated, Prototype, Development, Production]
 
 License: [License]
 
-Author(s): [Author - Contact,]
+Author(s): [Author - Contact], ...
 
-Maintainer: [Author - Contact]
+Maintainer: [Author - Contact], ...
 
 Credit: [Credit to additional parties that aren't contributors]
 
@@ -79,6 +79,7 @@ An example footer comment would look like:
 
 History of Contributions:
 [Year/Month/Day] - [Author - Contact] - [Brief description of the change]
+
 ...
 
 ---
