@@ -1,6 +1,6 @@
 # Garrett's General Programming Style Guide
 
-## Version: 1.0
+## Version: 1.0.0.0
 
 # Table of Contents
 
@@ -49,7 +49,7 @@ Project: [Project Name] [link to website, source code, or repository]
 
 Copyright: Copyright (c) [First Year]-[Current Year] [Project Name] Contributors
 
-Version: [Version Number]
+Version: [Version Number (Major#-Minor#-Patch#-Development#)]
 
 Status: [Removed, Deprecated, Prototype, Development, Production]
 
