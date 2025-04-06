@@ -22,6 +22,10 @@
 - [Max Nesting Levels](#Max_Nesting_Levels)
 - [Optimization](#Optimization)
 - [Principle of Least Privilege](#PLP)
+- [File Structure](#File_Structure)
+- [Code Block Size](#Block_Size)
+- [Hard Coded Values](#Hard_Coded)
+- [Generative Artificial Intelligence](#Gen_AI)
 
 ---
 
@@ -49,7 +53,7 @@ Project: [Project Name] [link to website, source code, or repository]
 
 Copyright: Copyright (c) [First Year]-[Current Year] [Project Name] Contributors
 
-Version: [Version Number (Major#-Minor#-Patch#-Development#)]
+Version: [Version Number (Major#.Minor#.Patch#.Development#)]
 
 Status: [Removed, Deprecated, Prototype, Development, Production]
 
@@ -276,3 +280,21 @@ We live in a time where computers are more than capable of running even the most
 <h2 id="PLP">Principle of Least Privilege</h2>
 
 You should use the least amount of privilege possible for your application. Meaning that you should use as little permissions, resources, data, and other applications as required by your application.
+
+<h2 id="File_Structure">File Structure</h2>
+
+I believe that files should be made for each of the smallest components in a programming language. Whether it be functions, classes, methods, etc. This can get messy very quickly though so use your discretion when creating your project's file structure.
+
+<h2 id="Block_Size">Code Block Size</h2>
+
+I believe that code should be broken down into the smallest, most extensible, and most generalized chunks possible. However, some would argue that code should be specific and only implement functionality that is needed at the moment. The choice between generalized and specialized code is a personal preference, but both options should aim for minimizing the size of individual components.
+
+<h2 id="Hard_Coded">Hard Coded Values</h2>
+
+Hard coding values should be avoided at all costs. For not only future extensibility but also safety. Instead you should use options such as configuration files or environment variables.
+
+It should also go without saying that you should not hardcode values such as passwords, API keys, and encryption keys.
+
+<h2 id="Gen_AI">Generative Artificial Intelligence</h2>
+
+I am a firm hater of Generative Artificial Intelligence, but that is beyond the point. In general, do not use a tool that generates&mdash;not only code but anything else&mdash;that you do not understand. You should also not blindly copy and paste code that you do not understand. Doing either will lead to problems and only does yourself a disservice in the future. Putting aside the immoral and unethical aspects of using statistical plagiarism facilitated through predictive algorithms&mdash;machine learning&mdash; that are trained using creations scraped and stolen from actual creators with no credit given or permission received that do not have an understanding of correct or incorrect when they conjure up their responses and hallucinations, using tools akin to GenAI don't further your knowledge, skill, and experience. You should take passion, pride, and interest in programming, or any creative passion you have; with the everlasting goal being to improve and learn more. If you are only interested in programming, or any creative passion you have, for the pursuit of efficiency and/or profit instead of the pursuit of knowledge, skill, creativity, originality, artistry, passion... I pity you. However, even if you have no care for the craft of programming, or the effort of the creators that have honed their knowledge and skill over the course of years, the slop that you generate through GenAI is generally not copyrightable as of now, and hopefully never will be; At best you may be able to copyright the prompt you used.
