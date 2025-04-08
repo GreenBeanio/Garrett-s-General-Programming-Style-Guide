@@ -25,6 +25,8 @@
 - [File Structure](#File_Structure)
 - [Code Block Size](#Block_Size)
 - [Hard Coded Values](#Hard_Coded)
+- [Tests](#Tests)
+- [Methodology](#Methodology)
 - [Generative Artificial Intelligence](#Gen_AI)
 
 ---
@@ -294,6 +296,33 @@ I believe that code should be broken down into the smallest, most extensible, an
 Hard coding values should be avoided at all costs. For not only future extensibility but also safety. Instead you should use options such as configuration files or environment variables.
 
 It should also go without saying that you should not hardcode values such as passwords, API keys, and encryption keys.
+
+<h2 id="Tests">Tests</h2>
+
+You should include tests for your code. The extent of how many tests you have is up to you. You should at least include tests for the most important, critical, and common functions. It will often probably not be worth implementing an ongoing test for each function, but they should at least be verified upon creation.
+
+<h2 id="Methodology">Methodology</h2>
+
+My methodology for creation is that you should follow this order:
+
+1. Plan
+2. Create
+3. Take Notes
+4. Edit
+5. Document
+6. Reflect
+
+Follow that order in an continuous cycle until you are ready to complete, publish, or cancel the project.
+
+You should also always have a goal, a purpose, a schedule, a deadline, and if applicable, a budget for what you're creating.
+
+It is also helpful to tell others about your creative endeavors to hold you accountable to the process and prevent procrastination.
+
+You should also recognize when it's time to call something complete instead of focusing on perfection; often imperfection is more interesting and compelling than perfection.
+
+You should be continuously learning and improving. Stagnation is the death of passion.
+
+You should compare to yourself instead of others. What matters is that you're improving and staying passionate, not how you compare to others. However, for professional work you will need to be comparable to others in your field.
 
 <h2 id="Gen_AI">Generative Artificial Intelligence</h2>
 
