@@ -24,6 +24,7 @@
 - [Principle of Least Privilege](#PLP)
 - [File Structure](#File_Structure)
 - [Code Block Size](#Block_Size)
+- [Backward Compatibility](#Backward_Compatibility)
 - [Hard Coded Values](#Hard_Coded)
 - [Tests](#Tests)
 - [Methodology](#Methodology)
@@ -123,6 +124,8 @@ Overall, my philosophy when it comes to comments is to use them as much as you n
 You should always try and create documentation for what you're creating. Especially, if you expect others to use it. For your own sanity it is best to create some kind of documentation. If you don't at some point in the future, you will revisit your code and wish you had.
 
 How verbose and complex or brief and simple you make this documentation is up to you. Whatever format you decide to use for your documentation is up to you as well. It should be in a format that is easily accessible and modifiable by other developers.
+
+Many programming languages have inline documentation options available. These options allow you to write your documentation as comments in the code that are later generated into documentation. If this option is available it can save significant time by keeping your documentation and code together. This can also help future maintainers or collaborators of the codebase by having the documentation available in the code itself.
 
 <h2 id="Naming_Conventions">Naming Conventions</h2>
 
@@ -286,6 +289,10 @@ You should use the least amount of privilege possible for your application. Mean
 <h2 id="File_Structure">File Structure</h2>
 
 I believe that files should be made for each of the smallest components in a programming language. Whether it be functions, classes, methods, etc. This can get messy very quickly though so use your discretion when creating your project's file structure.
+
+<h2 id="Backward_Compatibility">Backward Compatibility</h2>
+
+A priority of your code should be preserving backward compatibility. If you publish a class, method, function, etc. it should remain accessible for perpetuity and the structure and interface should remain consistent with past versions.
 
 <h2 id="Block_Size">Code Block Size</h2>
 
